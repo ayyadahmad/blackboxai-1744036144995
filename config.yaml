@@ -1,0 +1,31 @@
+# Google API Configuration
+google_api:
+  credentials_file: "credentials.json"
+  scopes:
+    - "https://www.googleapis.com/auth/drive"
+
+# Default paths and settings
+default_paths:
+  backup_folder: "Backups"
+  temp_folder: "temp"
+
+# Operation settings
+batch_size: 50
+max_retries: 5
+retry_delay: 1  # Initial delay in seconds for exponential backoff
+
+# Logging configuration
+logging:
+  level: "INFO"
+  file: "audit.log"
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+
+# Scheduler settings
+scheduler:
+  enabled: true
+  task_interval: "24h"  # Supports format: 1h, 1d, 1w
+
+# Security
+security:
+  keyring_service_name: "gdrive-tool"
+  keyring_username: "default"
