@@ -1,0 +1,28 @@
+{
+  "commands": [
+    {
+      "action": "copy",
+      "target": "README.txt",
+      "destination": "all_subfolders",
+      "description": "Copy README.txt to all subfolders"
+    },
+    {
+      "action": "rename",
+      "target": "*.docx",
+      "suffix": "_2024",
+      "description": "Add '_2024' suffix to all .docx files"
+    },
+    {
+      "action": "delete",
+      "pattern": "draft_*",
+      "description": "Delete all files starting with 'draft_'"
+    },
+    {
+      "action": "backup",
+      "target": "*.pdf",
+      "destination": "/Backups",
+      "schedule": "daily",
+      "description": "Daily backup of PDF files"
+    }
+  ]
+}
